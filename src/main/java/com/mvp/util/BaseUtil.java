@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.UnavailableSecurityManagerException;
 import org.apache.shiro.crypto.hash.SimpleHash;
@@ -303,10 +304,11 @@ public class BaseUtil {
 		return UUID.randomUUID().toString().replaceAll("-", "").substring(0, length);
 	}
 	
-//	public static void main(String[] args) {
-//		System.out.println(UUID.randomUUID().toString().replaceAll("-", ""));
-//		System.out.println(password2Hex("lustboy", "123456"));//f7c3aea7e18076502c9e29fc4d4d16f9
-//		System.out.println(getCurrentUser());
-//	}
+
+	public static void main(String[] args) {
+		System.out.println(UUID.randomUUID().toString().replaceAll("-", ""));
+		System.out.println(password2Hex("lustboy", "123456"));//f7c3aea7e18076502c9e29fc4d4d16f9
+		System.out.println(getCurrentUser());
+	}
 	
 }

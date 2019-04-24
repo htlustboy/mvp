@@ -65,5 +65,6 @@ public class User {
 	}
 	public void setEnable(boolean isEnable) {
 		this.isEnable = isEnable;
-	}
+	}	
+	
 }

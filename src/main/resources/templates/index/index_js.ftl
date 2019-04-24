@@ -7,6 +7,8 @@ $(function(){
 	initValidion();
 });
 
+
+
 function initValidion(){
 	
 }

@@ -81,6 +81,13 @@
         <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
     
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+		<scope>test</scope>
+	</dependency>
+    
+    
     <!-- freemaker -->     
     <dependency>         
 	    <groupId>org.springframework.boot</groupId>         
@@ -241,6 +248,23 @@
 	    <groupId>org.springframework</groupId>
 	    <artifactId>spring-context-support</artifactId>
 	    <version>4.3.14.RELEASE</version>
+	</dependency>
+	
+	<dependency>
+	  <groupId>javax.mail</groupId>
+	  <artifactId>javax.mail-api</artifactId>
+	</dependency>
+	 
+    <dependency>
+        <groupId >com.sun.mail</groupId >
+        <artifactId >javax.mail</artifactId >
+    </dependency>
+	 
+	<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+	<dependency>
+	    <groupId>javax.mail</groupId>
+	    <artifactId>mail</artifactId>
+	    <version>1.4.7</version>
 	</dependency>
 	
   </dependencies>

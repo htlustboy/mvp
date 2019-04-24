@@ -1,40 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.caroa.dao.UserMapper">
+<mapper namespace="com.mvp.dao.UserMapper">
 
-	<resultMap type="com.caroa.model.User" id="userMap">
+	<resultMap type="com.mvp.model.User" id="userMap">
 		<id property="id" column="id"/>
 		<result property="username" column="username"/>
 		<result property="password" column="password"/>
 		<result property="displayName" column="display_name"/>
+		<result property="telPhone" column="tel_phone"/>
 		<result property="email" column="email"/>
-		<result property="phoneNum" column="phone_num"/>
-		<result property="address" column="address"/>
-		<result property="memo" column="memo"/>
+		<result property="level" column="level"/>
+		<result property="status" column="status"/>
 		<result property="isEnable" column="is_enable"/>
-		<result property="intergral" column="intergral"/>
-		<result property="code" column="code"/>
 	</resultMap>
 	
-	<select id="queryUserByName" resultMap="userMap">
-		select * from t_user t where 1=1 and t.username=#{username}
+	<select id="findUserByUserName" resultMap="userMap">
+		select * from t_user t where 1=1 and t.username = #{username}
 	</select>
 	
-	<insert id="saveUser" parameterType="com.caroa.model.User">
-		insert into t_user(id,username,password,display_name,email,phone_num,address,memo) 
-		values (#{id},#{username},#{password},#{displayName},#{email},#{phoneNum},#{address},#{memo})
-	</insert>
-	
-	<update id="updateUserCode">
-		update t_user set code=#{code} where 1=1 and username=#{username}
-	</update>
-	
-	<update id="clearCode">
-		update t_user set code = null
-	</update>
-	
-	<update id="updatePwd">
-		update t_user set password=#{password} where 1=1 and username=#{username} and code=#{code}
-	</update>
 </mapper>

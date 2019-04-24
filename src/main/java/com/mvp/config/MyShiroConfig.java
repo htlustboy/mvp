@@ -13,8 +13,10 @@ import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.ResourceBundleMessageSource;
 
 import com.mvp.util.BaseUtil;
 
@@ -39,6 +41,7 @@ public class MyShiroConfig {
 		logger.info("加载缓存......");
 		return ehCacheManager;
 	}
+	
 	
 	/**
 	 * shiro关键配置，配置shiroFilter

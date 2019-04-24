@@ -1,5 +1,3 @@
-<#import "spring.ftl" as spring/>
-
 <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
 <link rel="stylesheet" type="text/css" href="/css/bootstrapValidator.min.css"/> 
 <link href="//cdn.bootcss.com/tether/1.3.6/css/tether.min.css" rel="stylesheet">
